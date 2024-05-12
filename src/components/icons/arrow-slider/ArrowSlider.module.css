@@ -1,0 +1,29 @@
+.arrowSlider {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  right: 5%;
+  bottom: 50%;
+  z-index: 2;
+}
+.circleSlider {
+  background-color: #C09357;
+  width: 4px;
+  height: 4px;
+  margin: 10px 0;
+  border-radius: 50%;
+}
+/* Responsive */
+@media only screen and (max-width: 767px) {
+  .arrowSlider {
+    flex-direction: row;
+    width: 100%;
+    right: 0%;
+    bottom: 16%;
+  }
+  .circleSlider {
+    margin: 0 100px !important;
+  }
+}

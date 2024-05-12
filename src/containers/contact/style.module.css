@@ -1,0 +1,134 @@
+.contact {
+  padding: 64px 0 55px 0;
+}
+.contact_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.contact_left {
+  width: 35%;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.contact_left_content {
+  margin-bottom: 50px;
+}
+
+.contact_title {
+  font-weight: 400;
+  font-size: 4.375rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-white);
+  font-family: Abolition;
+  margin-bottom: 24px;
+}
+
+.contact_text {
+  font-weight: 700;
+  font-size: 1.125rem;
+  text-transform: lowercase;
+  color: var(--text-gray);
+}
+
+.contact_right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact_form input {
+  margin-bottom: 40px;
+}
+
+.contact_form_bottom {
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact_form_bottom ul {
+  display: flex;
+  align-items: center;
+}
+
+.contact_form_bottom ul li {
+  margin: 0 20px;
+}
+
+.contact_map {
+  margin-top: 50px;
+  height: 193px;
+}
+
+@media screen and (max-width: 1199px) {
+  .contact {
+    padding: 89px 0 109px 0;
+  }
+
+  .contact_content {
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+  }
+
+  .contact_left,
+  .contact_right {
+    width: 100%;
+  }
+
+  .contact_left {
+    align-items: center;
+  }
+
+  .contact_title {
+    font-size: 2.25rem;
+    margin-bottom: 10px;
+  }
+
+  .contact_text {
+    font-size: 0.75rem;
+    max-width: 286px;
+  }
+
+  .contact_attach {
+    font-size: 0.75rem;
+    max-width: 96px;
+    margin: 0 auto;
+  }
+
+  .contact_attach svg {
+    margin-right: 10px;
+  }
+
+  .contact_form input {
+    margin-bottom: 16px;
+  }
+
+  .contact_form_bottom {
+    margin-top: 24px;
+    justify-content: center;
+  }
+
+  .contact_map {
+    height: 103px;
+  }
+
+  .contact_left svg {
+    position: absolute;
+    max-width: 82px;
+    height: 82px;
+    bottom: -95px;
+    left: 10%;
+  }
+}

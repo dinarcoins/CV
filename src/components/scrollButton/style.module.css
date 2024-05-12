@@ -1,0 +1,30 @@
+
+.descriptionPanel {
+  display: flex;
+  align-items: center;
+  animation: bounce 3s ease infinite 0.5s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(0.875, 0.875) translateY(0);
+  }
+
+  50% {
+    transform: scale(1.2, 1.15) translateY(-20px);
+  }
+
+  100% {
+    transform: scale(0.875, 0.875) translateY(0);
+  }
+}
+
+.btnScroll {
+  background: transparent;
+  cursor: pointer;
+  color: var(--gray);
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 120%;
+  font-family: Nunito;
+}

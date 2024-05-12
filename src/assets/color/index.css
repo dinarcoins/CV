@@ -1,0 +1,19 @@
+:root {
+  --main-bg-color: #1d1d1d;
+  --bg-header-footer: rgba(0, 0, 0, 0.95);
+
+  --text-white: #ffffff;
+  --text-gray: #8a8894;
+  --text-black: #212121;
+  --text-red: #C09357;
+  --text-orange: #C09357;
+
+  --gray: #c9c8d3;
+  --red: #C09357;
+  --red-bg: #C09357;
+  --white: #ffffff;
+  --black: #000000;
+
+  --black-opacity: rgba(0, 0, 0, 0.9);
+  --black-above: #313131;
+}

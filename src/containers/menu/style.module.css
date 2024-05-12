@@ -1,0 +1,35 @@
+.menu {
+}
+
+.menu_list {
+  height: calc(100vh - 196px);
+}
+
+ul.menu_list_ul {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+ul.menu_list_ul li a {
+  font-weight: 400;
+  font-size: 5.375rem;
+  line-height: 74%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-white);
+  font-family: Abolition;
+  transition: all ease 0.3s;
+}
+
+ul.menu_list_ul li a:hover {
+  transition: all ease 0.3s;
+  color: var(--text-red);
+}
+
+.menu_active {
+  color: var(--text-red);
+  background-color: var(--text-red);
+  font-size: 2rem;
+}

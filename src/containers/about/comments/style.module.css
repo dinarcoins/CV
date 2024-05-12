@@ -1,0 +1,146 @@
+.comments {
+  background: var(--text-red);
+  padding: 100px 0;
+  position: relative;
+  z-index: 2;
+}
+
+.comments_content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.comments_title,
+.comments_slide {
+  width: 50%;
+}
+
+.img_custom {
+  width: 144px;
+  height: 144px;
+  position: relative;
+}
+
+.comments_title div {
+  font-weight: 400;
+  font-size: 8.75rem;
+  line-height: 74%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-white);
+  font-family: Abolition;
+  white-space: nowrap;
+}
+
+.comments_text {
+  text-align: right;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-end !important;
+}
+
+.comments_text p {
+  color: var(--text-white);
+  font-size: 1.5rem;
+  line-height: 28px;
+}
+
+.comments_text div {
+  font-size: 2rem;
+  color: var(--text-white);
+  line-height: 38px;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+/* slick */
+
+.dots {
+  text-align: right !important;
+}
+
+.dots li button:before {
+  font-size: 16px;
+  color: var(--black-above);
+  opacity: 1;
+}
+
+/* responsive */
+
+@media screen and (max-width: 1366px) {
+  .comments {
+    padding: 40px 0;
+  }
+  .comments_title div {
+    font-size: 5rem;
+  }
+
+  .comments_text p {
+    font-size: 0.875rem;
+    line-height: 18px;
+  }
+
+  .comments_text div {
+    font-size: 1rem;
+    margin-top: 0px;
+    margin-bottom: 10px;
+  }
+
+  .img_custom {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .comments_title div {
+    font-size: 4rem;
+  }
+
+  .comments_text p {
+    font-size: 0.675rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .comments_title div {
+    font-size: 3rem;
+  }
+
+  .comments_content {
+    flex-direction: column;
+  }
+
+  .comments_title,
+  .comments_slide {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .comments_text p {
+    font-size: 0.575rem;
+    line-height: 12px;
+  }
+
+  .comments_text div {
+    margin-bottom: 5px;
+  }
+
+  .img_custom {
+    width: 60px;
+    height: 60px;
+  }
+
+  .dots li {
+    margin: 0;
+  }
+
+  .dots li button {
+    width: 12px;
+    height: 12px;
+  }
+
+  .dots li button:before {
+    font-size: 10px;
+  }
+}

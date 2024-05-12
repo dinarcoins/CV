@@ -1,0 +1,239 @@
+.header {
+  background-color: var(--bg-header-footer);
+  box-shadow: 0px 12px 18px rgba(0, 0, 0, 0.24);
+  height: 98px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--black);
+  position: relative;
+  z-index: 15;
+}
+
+.header_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo a {
+  display: flex;
+  align-items: center;
+}
+
+.logo a span {
+  font-weight: 700;
+  font-size: 1.125rem;
+  line-height: 26px;
+  color: var(--text-white);
+  text-transform: uppercase;
+  font-family: Fester;
+  margin-left: 10px;
+}
+
+.header_items {
+  display: flex;
+  align-items: center;
+}
+
+ul.header_social_ul {
+  display: flex;
+  width: 100%;
+  padding: 0;
+  margin-right: 120px;
+}
+
+ul.header_social_ul li {
+  margin-right: 16px;
+}
+
+.header_menu_list {
+  opacity: 1 !important;
+  animation: menuList 0.5s ease-in-out forwards;
+  pointer-events: unset !important;
+  background-color: var(--black-opacity);
+  width: 100%;
+}
+
+.header_menu_list2 {
+  z-index: -1;
+  animation: menuList2 0.5s ease-in-out forwards;
+  background-color: var(--black-opacity);
+}
+
+.menu {
+  opacity: 0;
+  pointer-events: none;
+  position: absolute;
+  width: 100%;
+  height: calc(100vh - 98px);
+  top: 98px;
+  left: 0;
+  background-color: var(--black-opacity) !important;
+  display: flex;
+  overflow-y: scroll;
+}
+
+.header_menu_list_ul {
+  padding: 50px 0 50px 200px;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+  gap: 3.5rem;
+  width: 100%;
+}
+
+ul.header_menu_list_ul li a {
+  font-weight: 400;
+  font-size: 5.375rem;
+  line-height: 74%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-white);
+  font-family: Abolition;
+  transition: all ease 0.3s;
+  width: 100%;
+  display: block;
+}
+
+ul.header_menu_list_ul li a:hover {
+  transition: all ease 0.3s;
+  color: var(--text-red);
+}
+
+/* hamburger */
+
+.hamburger div {
+  margin-bottom: 3px;
+}
+
+.hamburger div:first-child,
+.hamburger div:nth-child(3),
+.hamburger_close div {
+  width: 27px;
+  height: 4px;
+  background-color: var(--white);
+  border-radius: 4px;
+}
+
+.hamburger div:first-child,
+.hamburger div:nth-child(3) {
+  animation: btnOpen2 0.5s ease-in-out forwards;
+}
+
+.hamburger div:nth-child(2),
+.hamburger div:nth-child(4) {
+  width: 21px;
+  height: 4px;
+  background-color: var(--white);
+  border-radius: 4px;
+  animation: btnOpen1 0.5s ease-in-out forwards;
+}
+
+.hamburger_close div:first-child {
+  animation: btnClose2 0.5s ease-in-out forwards;
+}
+
+.hamburger_close div:last-child {
+  animation: btnClose1 0.5s ease-in-out forwards;
+}
+
+@keyframes btnClose1 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+
+@keyframes btnClose2 {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes btnOpen1 {
+  0% {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes btnOpen2 {
+  0% {
+    transform: translateX(-10px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes menuList {
+  0% {
+    transform: rotateY(90deg) translateX(100%) scale(0.2);
+  }
+  100% {
+    transform: rotateY(0deg) translateX(0) scale(1);
+  }
+}
+
+@keyframes menuList2 {
+  0% {
+    opacity: 1;
+    transform: rotateY(0deg) translateX(0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: rotateY(90deg) translateX(100%) scale(0.2);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  ul.header_menu_list_ul li a {
+    font-size: 36px;
+  }
+  .menu {
+    padding: 0;
+    justify-content: center;
+  }
+
+  .header_menu_list_ul {
+    padding: 0;
+    text-align: center;
+    justify-content: flex-start;
+  }
+
+  ul.header_menu_list_ul li {
+    margin: 20px 0;
+  }
+
+  ul.header_social_ul {
+    margin-right: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header {
+    height: 64px;
+  }
+
+  .logo a span,
+  ul.header_social_ul {
+    display: none;
+  }
+
+  .menu {
+    height: calc(100vh - 64px);
+    top: 64px;
+  }
+}

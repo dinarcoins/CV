@@ -1,0 +1,136 @@
+.ourStyle {
+  padding: 90px 0;
+}
+
+.ourStyle_title {
+  font-weight: 400;
+  font-size: 8.75rem;
+  line-height: 74%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-white);
+  text-align: center;
+  font-family: Abolition;
+  margin-bottom: 90px;
+  white-space: nowrap;
+}
+
+.ourStyle_content {
+  padding: 0 120px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.ourStyle_items {
+  width: calc((100% / 4) - 20px);
+  border: 1px solid var(--text-red);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 58px 6px;
+  text-align: center;
+}
+
+.ourStyle_items_title {
+  padding: 11px;
+  width: 100%;
+  background-color: var(--text-red);
+  position: absolute;
+  left: 5px;
+  top: -10px;
+  font-weight: 700;
+  font-size: 1.5rem;
+  line-height: 120%;
+  color: var(--text-white);
+  text-transform: uppercase;
+  text-align: left;
+}
+
+.ourStyle_items_title::after {
+  content: '';
+  width: 78px;
+  height: 78px;
+  background-color: var(--black);
+  position: absolute;
+  top: -30px;
+  right: -23px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.ourStyle_items_title span {
+  position: absolute;
+  font-weight: 400;
+  font-size: 4rem;
+  line-height: 96%;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-white);
+  font-family: Abolition;
+  top: -25px;
+  right: -15px;
+  z-index: 10;
+}
+
+.ourStyle_items p {
+  font-weight: 400;
+  font-size: 1.125rem;
+  line-height: 25px;
+  text-align: center;
+  color: var(--text-white);
+}
+
+@media screen and (max-width: 1440px) {
+  .ourStyle_content {
+    padding: 0 20px;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .ourStyle_content {
+    flex-wrap: wrap;
+  }
+
+  .ourStyle_items {
+    width: calc(50% - 20px);
+    max-width: 100%;
+    margin: 10px;
+  }
+
+  .ourStyle_title {
+    font-size: 6rem;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .ourStyle {
+    padding: 30px 0;
+  }
+
+  .ourStyle_content {
+    flex-direction: column;
+  }
+
+  .ourStyle_items {
+    width: 100%;
+    max-width: 100%;
+    margin: 0%;
+  }
+
+  .ourStyle_title {
+    font-size: 4rem;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .ourStyle_items_title span {
+    top: -10px;
+    right: -10px;
+  }
+
+  .ourStyle_items p {
+    font-size: 0.875rem;
+  }
+}
